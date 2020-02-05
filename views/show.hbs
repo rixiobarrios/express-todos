@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+{{#if complete}}
+<p>todo done!</p>
+{{else}}
+<p>still left to do</p>
+{{/if}}
+
+<form action="/todos/{{_id}}?_method=delete" method="post">
+  <input type="submit" value="Remove" />
+</form>

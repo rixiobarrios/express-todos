@@ -1,0 +1,19 @@
+<h2>Edit To Do:</h2>
+
+<form action="/todos/{{_id}}?_method=put" method="POST">
+
+  <p>
+    <label>Title:</label>
+    <input type="text" value="{{title}}" name="title" />
+  </p>
+  <p>
+    <label>Complete:</label>
+    {{#if complete}}
+    <input type="checkbox" name="complete" checked />
+    {{else}}
+    <input type="checkbox" name="complete" />
+    {{/if}}
+  </p>
+  <input type="submit" value="Update" />
+
+</form>
